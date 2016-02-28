@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Part 3</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Animal</th>
+        <th>Color</th>
+    </tr>
+    <tr>
+        <td>Zebra</td>
+        <td>Black and white</td>
+    </tr>
+    <tr>
+        <td>Tiger</td>
+        <td>Black and orange</td>
+    </tr>
+    <tr>
+        <td>Clownfish</td>
+        <td>Orange and white</td>
+    </tr>
+</table>
+
+</body>
+<script>
+
+    // Part 3 using JavaScript
+    var tableElemnt = document.getElementsByTagName("TH");
+    var allrows = document.getElementsByTagName("TR");
+    for (var i = 0; i < tableElemnt.length; i++) {
+        tableElemnt[i].style.color = "red";
+    }
+    for (var j = 1; j < allrows.length; j++) {
+        if (j % 2 == 0){
+            allrows[j].style.color = "blue";
+        } else {
+            allrows[j].style.color = "green";
+        }
+    }
+
+</script>
+</html>

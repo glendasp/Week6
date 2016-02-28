@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 5, Question 2</title>
+  <style>
+
+    h2.onclick{
+      background-color: green;
+    }
+
+    p.mouseover{
+      visibility: hidden;
+    }
+
+    h1.goblue{
+      color: blue;
+    }
+
+    .not_important.remove{
+      font-weight: lighter;
+    }
+
+  </style>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+
+  <script>
+
+    $("document").ready(function(){
+
+      //Making span elements bold - ok
+      $("span").css("font-weight","Bold");
+
+      //Making h2 elements background green on click - ok
+      $("h2").click(function(){
+        $(this).toggleClass('onclick');
+      });
+
+
+      //Make p elements disappear when mouse over - ok
+       $("p").hover(
+       function(){
+       $(this).addClass("mouseover");
+       },
+       function () {
+       $(this).removeClass("mouseover");
+       });
+
+
+      //Make h1 elements go blue when button clicked - ok
+      $("#h1_blue").click(function(){
+        $("h1").toggleClass('goblue')
+      });
+
+      //Remove the li items with class = "not_important" when button is clicked -
+      $("#remove_not_important").click(function(){
+        $(".not_important").remove();
+      })
+
+    });
+  </script>
+</head>
+
+<body>
+
+<h1>JQuery Selector Practice</h1>
+
+<h2>Click on the H2 elements, like me, to give them a green background.</h2>
+
+<p>Hide me when the <span>mouse</span> hovers over me</p>
+
+<P>Hide me on mouseover too! <span>Make sure I come back</span> when the mouse moves elsewhere</P>
+
+<h1>A list of items</h1>
+
+<P>Some of these things are important, some are not</P>
+<ol>
+  <li class="not_important">First thing is not important</li>
+  <li class="not_important">Second thing is also not important</li>
+  <li>But, Third thing is <span>important</span></li>
+</ol>
+
+<h2>Buttons</h2>
+
+<button type="button" id="h1_blue">Make H1 items blue</button>
+
+<button type="button" id="remove_not_important">Remove not important items</button>
+</body>
+</html>
+

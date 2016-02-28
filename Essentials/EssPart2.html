@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+
+    <style>
+        .highlight {
+            color: purple;
+        }
+
+    </style>
+
+    <script>
+        $("document").ready(function(){
+
+            //Setting header purple
+            $("th").toggleClass("highlight");
+
+            $( "tr:odd" ).css( "color", "green" )
+            $( "tr:even").css( "color", "blue" )
+
+        });
+
+
+
+    </script>
+</head>
+<body>
+
+<table>
+    <tr><th>Animal</th><th>Color</th></tr>
+    <tr><td>Zebra</td><td>Black and white</td></tr>
+    <tr><td>Tiger</td><td>Black and orange</td></tr>
+    <tr><td>Clownfish</td><td>Orange and white</td></tr>
+</table>
+
+</body>
+</html>
